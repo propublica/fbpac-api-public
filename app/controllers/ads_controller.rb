@@ -65,10 +65,6 @@ class AdsController < ApplicationController
             ads = ads.where("segments @> ?", params[:segments])
         end
 
-        if params[:segments_any]
-            ads = ads.where(params[:segments_any].map{|segment| "segments @> ?", segment }.join(" OR "), params[:segments_any] )
-        end
-
         if params[:states]
             states = params[:states].split(",")
             ads = ads.where(candidates: {state: states.size == 1 ? states[0] : states})
