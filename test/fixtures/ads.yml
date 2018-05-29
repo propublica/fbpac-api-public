@@ -1,0 +1,821 @@
+enUSpolitical:
+  id: '123456789001'
+  html: <div class="_1dwg _1w_m"></div>
+  political: 3
+  not_political: 1
+  title: Whatever
+  message: "<p>My message</p>"
+  thumbnail: https://pp-facebook-ads.s3.amazonaws.com/v/t1.0-1/p100x100/24774891_10155405316964794_7783750774088593421_n.jpg
+  created_at: 2018-03-13 19:12:47.455065000 Z
+  updated_at: 2018-04-04 22:04:38.923958000 Z
+  lang: en-US
+  images:
+  - https://pp-facebook-ads.s3.amazonaws.com/v/t45.1600-4/p476x249/22287482_6078860636066_906080371077021696_n.png
+  impressions: 2
+  political_probability: 0.980984496216895
+  targeting: <div></div>
+  suppressed: false
+  targets:
+  - target: Age
+    segment: 18 and older
+  - target: Region
+    segment: the United States
+  advertiser: Whatever
+  entities:
+  - entity: House
+    entity_type: Organization
+  page: https://www.facebook.com/example/
+  lower_page: https://www.facebook.com/example/
+enUSpolitical2:
+  id: '123456789005'
+  html: <div class="_1dwg _1w_m"></div>
+  political: 3
+  not_political: 1
+  title: Whatever
+  message: "<p>My message</p>"
+  thumbnail: https://pp-facebook-ads.s3.amazonaws.com/v/t1.0-1/p100x100/24774891_10155405316964794_7783750774088593421_n.jpg
+  created_at: 2018-03-13 19:12:47.455065000 Z
+  updated_at: 2018-04-04 22:04:38.923958000 Z
+  lang: en-US
+  images:
+  - https://pp-facebook-ads.s3.amazonaws.com/v/t45.1600-4/p476x249/22287482_6078860636066_906080371077021696_n.png
+  impressions: 2
+  political_probability: 0.980984496216895
+  targeting: <div></div>
+  suppressed: false
+  targets:
+  - target: Age
+    segment: 18 and older
+  - target: Region
+    segment: the United States
+  advertiser: SomethingElse
+  entities:
+  - entity: Senate
+    entity_type: Organization
+  page: https://www.facebook.com/example/
+  lower_page: https://www.facebook.com/example/
+enUSpoliticalDifferent:
+  id: '123456789006'
+  html: <div class="_1dwg _1w_m"></div>
+  political: 3
+  not_political: 1
+  title: Different
+  message: "<p>My message</p>"
+  thumbnail: https://pp-facebook-ads.s3.amazonaws.com/v/t1.0-1/p100x100/24774891_10155405316964794_7783750774088593421_n.jpg
+  created_at: 2018-03-13 19:12:47.455065000 Z
+  updated_at: 2018-04-04 22:04:38.923958000 Z
+  lang: en-US
+  images:
+  - https://pp-facebook-ads.s3.amazonaws.com/v/t45.1600-4/p476x249/22287482_6078860636066_906080371077021696_n.png
+  impressions: 2
+  political_probability: 0.980984496216895
+  targeting: <div></div>
+  suppressed: false
+  targets:
+  - target: Age
+    segment: Different
+  - target: Region
+    segment: Different
+  advertiser: Different
+  entities:
+  - entity: Different
+    entity_type: Organization
+  page: https://www.facebook.com/example/
+  lower_page: https://www.facebook.com/example/
+
+
+enUSnonpolitical:
+  id: '123456789002'
+  html: <div class="_1dwg _1w_m"></div>
+  political: 3
+  not_political: 1
+  title: Whatever
+  message: "<p>The House wants to remove Endangered Species protection for non-native
+    species, meaning law enforcement could not pursue wildlife crime cases involving
+    species from outside the United States, even if the crime occurs in the US.<br>
+    You can stop this.</p>"
+  thumbnail: https://pp-facebook-ads.s3.amazonaws.com/v/t1.0-1/p100x100/24774891_10155405316964794_7783750774088593421_n.jpg
+  created_at: 2018-03-13 19:12:47.455065000 Z
+  updated_at: 2018-04-04 22:04:38.923958000 Z
+  lang: en-US
+  images:
+  - https://pp-facebook-ads.s3.amazonaws.com/v/t45.1600-4/p476x249/22287482_6078860636066_906080371077021696_n.png
+  impressions: 2
+  political_probability: 0.10
+  targeting: <div></div>
+  suppressed: false
+  targets:
+  - target: Age
+    segment: 18 and older
+  advertiser: Whatever
+  entities:
+  - entity: House
+    entity_type: Organization
+  page: https://www.facebook.com/example/
+  lower_page: https://www.facebook.com/example/
+
+enUSsuppressed:
+  id: '123456789003'
+  html: <div class="_1dwg _1w_m"></div>
+  political: 3
+  not_political: 1
+  title: Whatever
+  message: "<p>The House wants to remove Endangered Species protection for non-native
+    species, meaning law enforcement could not pursue wildlife crime cases involving
+    species from outside the United States, even if the crime occurs in the US.<br>
+    You can stop this.</p>"
+  thumbnail: https://pp-facebook-ads.s3.amazonaws.com/v/t1.0-1/p100x100/24774891_10155405316964794_7783750774088593421_n.jpg
+  created_at: 2018-03-13 19:12:47.455065000 Z
+  updated_at: 2018-04-04 22:04:38.923958000 Z
+  lang: en-US
+  images:
+  - https://pp-facebook-ads.s3.amazonaws.com/v/t45.1600-4/p476x249/22287482_6078860636066_906080371077021696_n.png
+  impressions: 2
+  political_probability: 0.980984496216895
+  targeting: <div></div>
+  suppressed: true
+  targets:
+  - target: Age
+    segment: 18 and older
+  - target: Region
+    segment: the United States
+  advertiser: Whatever
+  entities:
+  - entity: Senate
+    entity_type: Organization
+  page: https://www.facebook.com/example/
+  lower_page: https://www.facebook.com/example/
+enCApolitical:
+  id: '123456789004'
+  html: <div class="_1dwg _1w_m"></div>
+  political: 3
+  not_political: 1
+  title: Whatever
+  message: "<p>My message</p>"
+  thumbnail: https://pp-facebook-ads.s3.amazonaws.com/v/t1.0-1/p100x100/24774891_10155405316964794_7783750774088593421_n.jpg
+  created_at: 2018-03-13 19:12:47.455065000 Z
+  updated_at: 2018-04-04 22:04:38.923958000 Z
+  lang: en-CA
+  images:
+  - https://pp-facebook-ads.s3.amazonaws.com/v/t45.1600-4/p476x249/22287482_6078860636066_906080371077021696_n.png
+  impressions: 2
+  political_probability: 0.980984496216895
+  targeting: <div></div>
+  suppressed: false
+  targets:
+  - target: Age
+    segment: 18 and older
+  - target: Region
+    segment: Canada
+  advertiser: Whatever
+  entities:
+  - entity: Parliament
+    entity_type: Organization
+  page: https://www.facebook.com/example/
+  lower_page: https://www.facebook.com/example/
+
+
+enUSpoliticalDifferent07:
+  id: '123456789007'
+  html: <div class="_1dwg _1w_m"></div>
+  political: 3
+  not_political: 1
+  title: Different
+  message: "<p>My message</p>"
+  thumbnail: https://pp-facebook-ads.s3.amazonaws.com/v/t1.0-1/p100x100/24774891_10155405316964794_7783750774088593421_n.jpg
+  created_at: 2018-03-13 19:12:47.455065000 Z
+  updated_at: 2018-04-04 22:04:38.923958000 Z
+  lang: en-US
+  images:
+  - https://pp-facebook-ads.s3.amazonaws.com/v/t45.1600-4/p476x249/22287482_6078860636066_906080371077021696_n.png
+  impressions: 2
+  political_probability: 0.980984496216895
+  targeting: <div></div>
+  suppressed: false
+  targets:
+  - target: Age
+    segment: Different
+  - target: Region
+    segment: Different
+  advertiser: Different
+  entities:
+  - entity: Different
+    entity_type: Organization
+  page: https://www.facebook.com/example/
+  lower_page: https://www.facebook.com/example/
+enUSpoliticalDifferent08:
+  id: '123456789008'
+  html: <div class="_1dwg _1w_m"></div>
+  political: 3
+  not_political: 1
+  title: Different
+  message: "<p>My message</p>"
+  thumbnail: https://pp-facebook-ads.s3.amazonaws.com/v/t1.0-1/p100x100/24774891_10155405316964794_7783750774088593421_n.jpg
+  created_at: 2018-03-13 19:12:47.455065000 Z
+  updated_at: 2018-04-04 22:04:38.923958000 Z
+  lang: en-US
+  images:
+  - https://pp-facebook-ads.s3.amazonaws.com/v/t45.1600-4/p476x249/22287482_6078860636066_906080371077021696_n.png
+  impressions: 2
+  political_probability: 0.980984496216895
+  targeting: <div></div>
+  suppressed: false
+  targets:
+  - target: Age
+    segment: Different
+  - target: Region
+    segment: Different
+  advertiser: Different
+  entities:
+  - entity: Different
+    entity_type: Organization
+  page: https://www.facebook.com/example/
+  lower_page: https://www.facebook.com/example/
+enUSpoliticalDifferent09:
+  id: '123456789009'
+  html: <div class="_1dwg _1w_m"></div>
+  political: 3
+  not_political: 1
+  title: Different
+  message: "<p>My message</p>"
+  thumbnail: https://pp-facebook-ads.s3.amazonaws.com/v/t1.0-1/p100x100/24774891_10155405316964794_7783750774088593421_n.jpg
+  created_at: 2018-03-13 19:12:47.455065000 Z
+  updated_at: 2018-04-04 22:04:38.923958000 Z
+  lang: en-US
+  images:
+  - https://pp-facebook-ads.s3.amazonaws.com/v/t45.1600-4/p476x249/22287482_6078860636066_906080371077021696_n.png
+  impressions: 2
+  political_probability: 0.980984496216895
+  targeting: <div></div>
+  suppressed: false
+  targets:
+  - target: Age
+    segment: Different
+  - target: Region
+    segment: Different
+  advertiser: Different
+  entities:
+  - entity: Different
+    entity_type: Organization
+  page: https://www.facebook.com/example/
+  lower_page: https://www.facebook.com/example/
+enUSpoliticalDifferent10:
+  id: '123456789010'
+  html: <div class="_1dwg _1w_m"></div>
+  political: 3
+  not_political: 1
+  title: Different
+  message: "<p>My message</p>"
+  thumbnail: https://pp-facebook-ads.s3.amazonaws.com/v/t1.0-1/p100x100/24774891_10155405316964794_7783750774088593421_n.jpg
+  created_at: 2018-03-13 19:12:47.455065000 Z
+  updated_at: 2018-04-04 22:04:38.923958000 Z
+  lang: en-US
+  images:
+  - https://pp-facebook-ads.s3.amazonaws.com/v/t45.1600-4/p476x249/22287482_6078860636066_906080371077021696_n.png
+  impressions: 2
+  political_probability: 0.980984496216895
+  targeting: <div></div>
+  suppressed: false
+  targets:
+  - target: Age
+    segment: Different
+  - target: Region
+    segment: Different
+  advertiser: Different
+  entities:
+  - entity: Different
+    entity_type: Organization
+  page: https://www.facebook.com/example/
+  lower_page: https://www.facebook.com/example/
+enUSpoliticalDifferent11:
+  id: '123456789011'
+  html: <div class="_1dwg _1w_m"></div>
+  political: 3
+  not_political: 1
+  title: Different
+  message: "<p>My message</p>"
+  thumbnail: https://pp-facebook-ads.s3.amazonaws.com/v/t1.0-1/p100x100/24774891_10155405316964794_7783750774088593421_n.jpg
+  created_at: 2018-03-13 19:12:47.455065000 Z
+  updated_at: 2018-04-04 22:04:38.923958000 Z
+  lang: en-US
+  images:
+  - https://pp-facebook-ads.s3.amazonaws.com/v/t45.1600-4/p476x249/22287482_6078860636066_906080371077021696_n.png
+  impressions: 2
+  political_probability: 0.980984496216895
+  targeting: <div></div>
+  suppressed: false
+  targets:
+  - target: Age
+    segment: Different
+  - target: Region
+    segment: Different
+  advertiser: Different
+  entities:
+  - entity: Different
+    entity_type: Organization
+  page: https://www.facebook.com/example/
+  lower_page: https://www.facebook.com/example/
+enUSpoliticalDifferent12:
+  id: '123456789012'
+  html: <div class="_1dwg _1w_m"></div>
+  political: 3
+  not_political: 1
+  title: Different
+  message: "<p>My message</p>"
+  thumbnail: https://pp-facebook-ads.s3.amazonaws.com/v/t1.0-1/p100x100/24774891_10155405316964794_7783750774088593421_n.jpg
+  created_at: 2018-03-13 19:12:47.455065000 Z
+  updated_at: 2018-04-04 22:04:38.923958000 Z
+  lang: en-US
+  images:
+  - https://pp-facebook-ads.s3.amazonaws.com/v/t45.1600-4/p476x249/22287482_6078860636066_906080371077021696_n.png
+  impressions: 2
+  political_probability: 0.980984496216895
+  targeting: <div></div>
+  suppressed: false
+  targets:
+  - target: Age
+    segment: Different
+  - target: Region
+    segment: Different
+  advertiser: Different
+  entities:
+  - entity: Different
+    entity_type: Organization
+  page: https://www.facebook.com/example/
+  lower_page: https://www.facebook.com/example/
+enUSpoliticalDifferent13:
+  id: '123456789013'
+  html: <div class="_1dwg _1w_m"></div>
+  political: 3
+  not_political: 1
+  title: Different
+  message: "<p>My message</p>"
+  thumbnail: https://pp-facebook-ads.s3.amazonaws.com/v/t1.0-1/p100x100/24774891_10155405316964794_7783750774088593421_n.jpg
+  created_at: 2018-03-13 19:12:47.455065000 Z
+  updated_at: 2018-04-04 22:04:38.923958000 Z
+  lang: en-US
+  images:
+  - https://pp-facebook-ads.s3.amazonaws.com/v/t45.1600-4/p476x249/22287482_6078860636066_906080371077021696_n.png
+  impressions: 2
+  political_probability: 0.980984496216895
+  targeting: <div></div>
+  suppressed: false
+  targets:
+  - target: Age
+    segment: Different
+  - target: Region
+    segment: Different
+  advertiser: Different
+  entities:
+  - entity: Different
+    entity_type: Organization
+  page: https://www.facebook.com/example/
+  lower_page: https://www.facebook.com/example/
+enUSpoliticalDifferent14:
+  id: '123456789014'
+  html: <div class="_1dwg _1w_m"></div>
+  political: 3
+  not_political: 1
+  title: Different
+  message: "<p>My message</p>"
+  thumbnail: https://pp-facebook-ads.s3.amazonaws.com/v/t1.0-1/p100x100/24774891_10155405316964794_7783750774088593421_n.jpg
+  created_at: 2018-03-13 19:12:47.455065000 Z
+  updated_at: 2018-04-04 22:04:38.923958000 Z
+  lang: en-US
+  images:
+  - https://pp-facebook-ads.s3.amazonaws.com/v/t45.1600-4/p476x249/22287482_6078860636066_906080371077021696_n.png
+  impressions: 2
+  political_probability: 0.980984496216895
+  targeting: <div></div>
+  suppressed: false
+  targets:
+  - target: Age
+    segment: Different
+  - target: Region
+    segment: Different
+  advertiser: Different
+  entities:
+  - entity: Different
+    entity_type: Organization
+  page: https://www.facebook.com/example/
+  lower_page: https://www.facebook.com/example/
+enUSpoliticalDifferent15:
+  id: '123456789015'
+  html: <div class="_1dwg _1w_m"></div>
+  political: 3
+  not_political: 1
+  title: Different
+  message: "<p>My message</p>"
+  thumbnail: https://pp-facebook-ads.s3.amazonaws.com/v/t1.0-1/p100x100/24774891_10155405316964794_7783750774088593421_n.jpg
+  created_at: 2018-03-13 19:12:47.455065000 Z
+  updated_at: 2018-04-04 22:04:38.923958000 Z
+  lang: en-US
+  images:
+  - https://pp-facebook-ads.s3.amazonaws.com/v/t45.1600-4/p476x249/22287482_6078860636066_906080371077021696_n.png
+  impressions: 2
+  political_probability: 0.980984496216895
+  targeting: <div></div>
+  suppressed: false
+  targets:
+  - target: Age
+    segment: Different
+  - target: Region
+    segment: Different
+  advertiser: Different
+  entities:
+  - entity: Different
+    entity_type: Organization
+  page: https://www.facebook.com/example/
+  lower_page: https://www.facebook.com/example/
+enUSpoliticalDifferent16:
+  id: '123456789016'
+  html: <div class="_1dwg _1w_m"></div>
+  political: 3
+  not_political: 1
+  title: Different
+  message: "<p>My message</p>"
+  thumbnail: https://pp-facebook-ads.s3.amazonaws.com/v/t1.0-1/p100x100/24774891_10155405316964794_7783750774088593421_n.jpg
+  created_at: 2018-03-13 19:12:47.455065000 Z
+  updated_at: 2018-04-04 22:04:38.923958000 Z
+  lang: en-US
+  images:
+  - https://pp-facebook-ads.s3.amazonaws.com/v/t45.1600-4/p476x249/22287482_6078860636066_906080371077021696_n.png
+  impressions: 2
+  political_probability: 0.980984496216895
+  targeting: <div></div>
+  suppressed: false
+  targets:
+  - target: Age
+    segment: Different
+  - target: Region
+    segment: Different
+  advertiser: Different
+  entities:
+  - entity: Different
+    entity_type: Organization
+  page: https://www.facebook.com/example/
+  lower_page: https://www.facebook.com/example/
+enUSpoliticalDifferent17:
+  id: '123456789017'
+  html: <div class="_1dwg _1w_m"></div>
+  political: 3
+  not_political: 1
+  title: Different
+  message: "<p>My message</p>"
+  thumbnail: https://pp-facebook-ads.s3.amazonaws.com/v/t1.0-1/p100x100/24774891_10155405316964794_7783750774088593421_n.jpg
+  created_at: 2018-03-13 19:12:47.455065000 Z
+  updated_at: 2018-04-04 22:04:38.923958000 Z
+  lang: en-US
+  images:
+  - https://pp-facebook-ads.s3.amazonaws.com/v/t45.1600-4/p476x249/22287482_6078860636066_906080371077021696_n.png
+  impressions: 2
+  political_probability: 0.980984496216895
+  targeting: <div></div>
+  suppressed: false
+  targets:
+  - target: Age
+    segment: Different
+  - target: Region
+    segment: Different
+  advertiser: Different
+  entities:
+  - entity: Different
+    entity_type: Organization
+  page: https://www.facebook.com/example/
+  lower_page: https://www.facebook.com/example/
+enUSpoliticalDifferent18:
+  id: '123456789018'
+  html: <div class="_1dwg _1w_m"></div>
+  political: 3
+  not_political: 1
+  title: Different
+  message: "<p>My message</p>"
+  thumbnail: https://pp-facebook-ads.s3.amazonaws.com/v/t1.0-1/p100x100/24774891_10155405316964794_7783750774088593421_n.jpg
+  created_at: 2018-03-13 19:12:47.455065000 Z
+  updated_at: 2018-04-04 22:04:38.923958000 Z
+  lang: en-US
+  images:
+  - https://pp-facebook-ads.s3.amazonaws.com/v/t45.1600-4/p476x249/22287482_6078860636066_906080371077021696_n.png
+  impressions: 2
+  political_probability: 0.980984496216895
+  targeting: <div></div>
+  suppressed: false
+  targets:
+  - target: Age
+    segment: Different
+  - target: Region
+    segment: Different
+  advertiser: Different
+  entities:
+  - entity: Different
+    entity_type: Organization
+  page: https://www.facebook.com/example/
+  lower_page: https://www.facebook.com/example/
+enUSpoliticalDifferent19:
+  id: '123456789019'
+  html: <div class="_1dwg _1w_m"></div>
+  political: 3
+  not_political: 1
+  title: Different
+  message: "<p>My message</p>"
+  thumbnail: https://pp-facebook-ads.s3.amazonaws.com/v/t1.0-1/p100x100/24774891_10155405316964794_7783750774088593421_n.jpg
+  created_at: 2018-03-13 19:12:47.455065000 Z
+  updated_at: 2018-04-04 22:04:38.923958000 Z
+  lang: en-US
+  images:
+  - https://pp-facebook-ads.s3.amazonaws.com/v/t45.1600-4/p476x249/22287482_6078860636066_906080371077021696_n.png
+  impressions: 2
+  political_probability: 0.980984496216895
+  targeting: <div></div>
+  suppressed: false
+  targets:
+  - target: Age
+    segment: Different
+  - target: Region
+    segment: Different
+  advertiser: Different
+  entities:
+  - entity: Different
+    entity_type: Organization
+  page: https://www.facebook.com/example/
+  lower_page: https://www.facebook.com/example/
+enUSpoliticalDifferent20:
+  id: '123456789020'
+  html: <div class="_1dwg _1w_m"></div>
+  political: 3
+  not_political: 1
+  title: Different
+  message: "<p>My message</p>"
+  thumbnail: https://pp-facebook-ads.s3.amazonaws.com/v/t1.0-1/p100x100/24774891_10155405316964794_7783750774088593421_n.jpg
+  created_at: 2018-03-13 19:12:47.455065000 Z
+  updated_at: 2018-04-04 22:04:38.923958000 Z
+  lang: en-US
+  images:
+  - https://pp-facebook-ads.s3.amazonaws.com/v/t45.1600-4/p476x249/22287482_6078860636066_906080371077021696_n.png
+  impressions: 2
+  political_probability: 0.980984496216895
+  targeting: <div></div>
+  suppressed: false
+  targets:
+  - target: Age
+    segment: Different
+  - target: Region
+    segment: Different
+  advertiser: Different
+  entities:
+  - entity: Different
+    entity_type: Organization
+  page: https://www.facebook.com/example/
+  lower_page: https://www.facebook.com/example/
+enUSpoliticalDifferent21:
+  id: '123456789021'
+  html: <div class="_1dwg _1w_m"></div>
+  political: 3
+  not_political: 1
+  title: Different
+  message: "<p>My message</p>"
+  thumbnail: https://pp-facebook-ads.s3.amazonaws.com/v/t1.0-1/p100x100/24774891_10155405316964794_7783750774088593421_n.jpg
+  created_at: 2018-03-13 19:12:47.455065000 Z
+  updated_at: 2018-04-04 22:04:38.923958000 Z
+  lang: en-US
+  images:
+  - https://pp-facebook-ads.s3.amazonaws.com/v/t45.1600-4/p476x249/22287482_6078860636066_906080371077021696_n.png
+  impressions: 2
+  political_probability: 0.980984496216895
+  targeting: <div></div>
+  suppressed: false
+  targets:
+  - target: Age
+    segment: Different
+  - target: Region
+    segment: Different
+  advertiser: Different
+  entities:
+  - entity: Different
+    entity_type: Organization
+  page: https://www.facebook.com/example/
+  lower_page: https://www.facebook.com/example/
+enUSpoliticalDifferent22:
+  id: '123456789022'
+  html: <div class="_1dwg _1w_m"></div>
+  political: 3
+  not_political: 1
+  title: Different
+  message: "<p>My message</p>"
+  thumbnail: https://pp-facebook-ads.s3.amazonaws.com/v/t1.0-1/p100x100/24774891_10155405316964794_7783750774088593421_n.jpg
+  created_at: 2018-03-13 19:12:47.455065000 Z
+  updated_at: 2018-04-04 22:04:38.923958000 Z
+  lang: en-US
+  images:
+  - https://pp-facebook-ads.s3.amazonaws.com/v/t45.1600-4/p476x249/22287482_6078860636066_906080371077021696_n.png
+  impressions: 2
+  political_probability: 0.980984496216895
+  targeting: <div></div>
+  suppressed: false
+  targets:
+  - target: Age
+    segment: Different
+  - target: Region
+    segment: Different
+  advertiser: Different
+  entities:
+  - entity: Different
+    entity_type: Organization
+  page: https://www.facebook.com/example/
+  lower_page: https://www.facebook.com/example/
+enUSpoliticalDifferent23:
+  id: '123456789023'
+  html: <div class="_1dwg _1w_m"></div>
+  political: 3
+  not_political: 1
+  title: Different
+  message: "<p>My message</p>"
+  thumbnail: https://pp-facebook-ads.s3.amazonaws.com/v/t1.0-1/p100x100/24774891_10155405316964794_7783750774088593421_n.jpg
+  created_at: 2018-03-13 19:12:47.455065000 Z
+  updated_at: 2018-04-04 22:04:38.923958000 Z
+  lang: en-US
+  images:
+  - https://pp-facebook-ads.s3.amazonaws.com/v/t45.1600-4/p476x249/22287482_6078860636066_906080371077021696_n.png
+  impressions: 2
+  political_probability: 0.980984496216895
+  targeting: <div></div>
+  suppressed: false
+  targets:
+  - target: Age
+    segment: Different
+  - target: Region
+    segment: Different
+  advertiser: Different
+  entities:
+  - entity: Different
+    entity_type: Organization
+  page: https://www.facebook.com/example/
+  lower_page: https://www.facebook.com/example/
+enUSpoliticalDifferent24:
+  id: '123456789024'
+  html: <div class="_1dwg _1w_m"></div>
+  political: 3
+  not_political: 1
+  title: Different
+  message: "<p>My message</p>"
+  thumbnail: https://pp-facebook-ads.s3.amazonaws.com/v/t1.0-1/p100x100/24774891_10155405316964794_7783750774088593421_n.jpg
+  created_at: 2018-03-13 19:12:47.455065000 Z
+  updated_at: 2018-04-04 22:04:38.923958000 Z
+  lang: en-US
+  images:
+  - https://pp-facebook-ads.s3.amazonaws.com/v/t45.1600-4/p476x249/22287482_6078860636066_906080371077021696_n.png
+  impressions: 2
+  political_probability: 0.980984496216895
+  targeting: <div></div>
+  suppressed: false
+  targets:
+  - target: Age
+    segment: Different
+  - target: Region
+    segment: Different
+  advertiser: Different
+  entities:
+  - entity: Different
+    entity_type: Organization
+  page: https://www.facebook.com/example/
+  lower_page: https://www.facebook.com/example/
+enUSpoliticalDifferent25:
+  id: '123456789025'
+  html: <div class="_1dwg _1w_m"></div>
+  political: 3
+  not_political: 1
+  title: Different
+  message: "<p>My message</p>"
+  thumbnail: https://pp-facebook-ads.s3.amazonaws.com/v/t1.0-1/p100x100/24774891_10155405316964794_7783750774088593421_n.jpg
+  created_at: 2018-03-13 19:12:47.455065000 Z
+  updated_at: 2018-04-04 22:04:38.923958000 Z
+  lang: en-US
+  images:
+  - https://pp-facebook-ads.s3.amazonaws.com/v/t45.1600-4/p476x249/22287482_6078860636066_906080371077021696_n.png
+  impressions: 2
+  political_probability: 0.980984496216895
+  targeting: <div></div>
+  suppressed: false
+  targets:
+  - target: Age
+    segment: Different
+  - target: Region
+    segment: Different
+  advertiser: Different
+  entities:
+  - entity: Different
+    entity_type: Organization
+  page: https://www.facebook.com/example/
+  lower_page: https://www.facebook.com/example/
+enUSpoliticalDifferent26:
+  id: '123456789026'
+  html: <div class="_1dwg _1w_m"></div>
+  political: 3
+  not_political: 1
+  title: Different
+  message: "<p>My message</p>"
+  thumbnail: https://pp-facebook-ads.s3.amazonaws.com/v/t1.0-1/p100x100/24774891_10155405316964794_7783750774088593421_n.jpg
+  created_at: 2018-03-13 19:12:47.455065000 Z
+  updated_at: 2018-04-04 22:04:38.923958000 Z
+  lang: en-US
+  images:
+  - https://pp-facebook-ads.s3.amazonaws.com/v/t45.1600-4/p476x249/22287482_6078860636066_906080371077021696_n.png
+  impressions: 2
+  political_probability: 0.980984496216895
+  targeting: <div></div>
+  suppressed: false
+  targets:
+  - target: Age
+    segment: Different
+  - target: Region
+    segment: Different
+  advertiser: Different
+  entities:
+  - entity: Different
+    entity_type: Organization
+  page: https://www.facebook.com/example/
+  lower_page: https://www.facebook.com/example/
+enUSpoliticalDifferent27:
+  id: '123456789027'
+  html: <div class="_1dwg _1w_m"></div>
+  political: 3
+  not_political: 1
+  title: Different
+  message: "<p>My message</p>"
+  thumbnail: https://pp-facebook-ads.s3.amazonaws.com/v/t1.0-1/p100x100/24774891_10155405316964794_7783750774088593421_n.jpg
+  created_at: 2018-03-13 19:12:47.455065000 Z
+  updated_at: 2018-04-04 22:04:38.923958000 Z
+  lang: en-US
+  images:
+  - https://pp-facebook-ads.s3.amazonaws.com/v/t45.1600-4/p476x249/22287482_6078860636066_906080371077021696_n.png
+  impressions: 2
+  political_probability: 0.980984496216895
+  targeting: <div></div>
+  suppressed: false
+  targets:
+  - target: Age
+    segment: Different
+  - target: Region
+    segment: Different
+  advertiser: Different
+  entities:
+  - entity: Different
+    entity_type: Organization
+  page: https://www.facebook.com/example/
+  lower_page: https://www.facebook.com/example/
+enUSpoliticalDifferent28:
+  id: '123456789028'
+  html: <div class="_1dwg _1w_m"></div>
+  political: 3
+  not_political: 1
+  title: Different
+  message: "<p>My message</p>"
+  thumbnail: https://pp-facebook-ads.s3.amazonaws.com/v/t1.0-1/p100x100/24774891_10155405316964794_7783750774088593421_n.jpg
+  created_at: 2018-03-13 19:12:47.455065000 Z
+  updated_at: 2018-04-04 22:04:38.923958000 Z
+  lang: en-US
+  images:
+  - https://pp-facebook-ads.s3.amazonaws.com/v/t45.1600-4/p476x249/22287482_6078860636066_906080371077021696_n.png
+  impressions: 2
+  political_probability: 0.980984496216895
+  targeting: <div></div>
+  suppressed: false
+  targets:
+  - target: Age
+    segment: Different
+  - target: Region
+    segment: Different
+  advertiser: Different
+  entities:
+  - entity: Different
+    entity_type: Organization
+  page: https://www.facebook.com/example/
+  lower_page: https://www.facebook.com/example/
+enUSpoliticalDifferent29:
+  id: '123456789029'
+  html: <div class="_1dwg _1w_m"></div>
+  political: 3
+  not_political: 1
+  title: Different
+  message: "<p>My message</p>"
+  thumbnail: https://pp-facebook-ads.s3.amazonaws.com/v/t1.0-1/p100x100/24774891_10155405316964794_7783750774088593421_n.jpg
+  created_at: 2018-03-13 19:12:47.455065000 Z
+  updated_at: 2018-04-04 22:04:38.923958000 Z
+  lang: en-US
+  images:
+  - https://pp-facebook-ads.s3.amazonaws.com/v/t45.1600-4/p476x249/22287482_6078860636066_906080371077021696_n.png
+  impressions: 2
+  political_probability: 0.980984496216895
+  targeting: <div></div>
+  suppressed: false
+  targets:
+  - target: Age
+    segment: Different
+  - target: Region
+    segment: Different
+  advertiser: Different
+  entities:
+  - entity: Different
+    entity_type: Organization
+  page: https://www.facebook.com/example/
+  lower_page: https://www.facebook.com/example/

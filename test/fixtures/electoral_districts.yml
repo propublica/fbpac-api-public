@@ -1,0 +1,10 @@
+ga06:
+  state: "GA"
+  name: "06"
+  office: "H"
+  country: "US"
+gagov:
+  state: "GA"
+  name: "Governor"
+  office: "Governor"
+  country: "US"

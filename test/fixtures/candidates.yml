@@ -1,0 +1,7 @@
+fake:
+  state: "GA"
+  district: "04"
+  facebook_url: "https://www.facebook.com/example/" 
+  name: "fake fake"
+  party: 1
+  office: "H"
