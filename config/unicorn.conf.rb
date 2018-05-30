@@ -1,6 +1,6 @@
 worker_processes 2
 working_directory "/web/"
-listen 115
+listen 80
 preload_app true
 
 # rails 4.1 conf, per
