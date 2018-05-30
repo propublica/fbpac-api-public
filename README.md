@@ -20,8 +20,6 @@ It's structured to be a drop-in replacement for some pieces of the Rust API... a
 
 ### Testing / comparison with the Rust API
 
-`ruby test.rb` # verify that the output of the Rust API and the Ruby API matches. (both must be running separately when you run this script)
-
 `rake test` runs the tests. Be sure to write new ones for new features!
 
 
