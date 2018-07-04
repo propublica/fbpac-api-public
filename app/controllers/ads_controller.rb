@@ -5,7 +5,7 @@ class AdsController < ApplicationController
     before_action :authenticate_partner!, unless: ->(c){ PUBLIC_ROUTES.include?(action_name) && c.params.keys.none?{|param| ADMIN_PARAMS.include?(param) }} # only admin users can modify the political probability
     skip_before_action :verify_authenticity_token
 
-    caches_action :index, expires_in: 30.minutes, :cache_path => Proc.new {|c|  c.request.url + (params[:lang] || http_accept_language.user_preferred_languages.find{|lang| lang.match(/..-../)} || "en-US") + c.request.query_parameters.except("lang").to_a.sort_by{|a, b| a }.map{|a|a.join(",")}.join(";") }
+    caches_action :index, expires_in: 5.minutes, :cache_path => Proc.new {|c|  c.request.url + (params[:lang] || http_accept_language.user_preferred_languages.find{|lang| lang.match(/..-../)} || "en-US") + c.request.query_parameters.except("lang").to_a.sort_by{|a, b| a }.map{|a|a.join(",")}.join(";") }
     caches_action :by_advertisers, expires_in: 30.minutes, :cache_path => Proc.new {|c|  c.request.url + (params[:lang] || http_accept_language.user_preferred_languages.find{|lang| lang.match(/..-../)} || "en-US") + c.request.query_parameters.except("lang").to_a.sort_by{|a, b| a }.map{|a|a.join(",")}.join(";") }
     caches_action :by_targets, expires_in: 30.minutes, :cache_path => Proc.new {|c|  c.request.url + (params[:lang] || http_accept_language.user_preferred_languages.find{|lang| lang.match(/..-../)} || "en-US") + c.request.query_parameters.except("lang").to_a.sort_by{|a, b| a }.map{|a|a.join(",")}.join(";") }
     caches_action :by_segments, expires_in: 30.minutes, :cache_path => Proc.new {|c|  c.request.url + (params[:lang] || http_accept_language.user_preferred_languages.find{|lang| lang.match(/..-../)} || "en-US") + c.request.query_parameters.except("lang").to_a.sort_by{|a, b| a }.map{|a|a.join(",")}.join(";") }
@@ -31,15 +31,19 @@ class AdsController < ApplicationController
 
     CANDIDATE_PARAMS = Set.new(["states", "districts", "parties", "joined"]) 
     def index
+        is_admin = false
         lang = params[:lang] || http_accept_language.user_preferred_languages.find{|lang| lang.match(/..-../)} || "en-US"
 
         ads = params.keys.any?{|key| CANDIDATE_PARAMS.include?(key)} ? Ad.joins(:candidate).where(lang: lang) : Ad.where(lang: lang) 
 
         if params[:poliprob] || params[:maxpoliprob] # order matters!
             ads = ads.unscope(:where).where(lang: lang)
+            is_admin = true
         end
         if params[:poliprob]
-            ads = ads.where("suppressed = false").where("political_probability > ?", params[:poliprob].to_f / 100)
+            if params[:poliprob].to_i != 0 # show even suppressed or unclassified ads if poliprob is 0
+                ads = ads.where("suppressed = false").where("political_probability > ?", params[:poliprob].to_f / 100)
+            end
         end
         if params[:maxpoliprob] # order matters!
             ads = ads.where("suppressed = false").where("political_probability < ?", params[:maxpoliprob].to_f / 100 )
@@ -84,12 +88,14 @@ class AdsController < ApplicationController
             ads = ads.where(candidates: {party: [parties.map(&:id).compact]})
         end
 
+        ads_page = ads.page((params[:page].to_i || 0) + 1)
+
         render json: {
-            ads: ads.page((params[:page].to_i || 0) + 1).as_json(:except => [:suppressed], include: params.keys.any?{|key| CANDIDATE_PARAMS.include?(key)} ? :candidate : nil ), # +1 here to mimic Rust behavior.
-            targets: params[:admin] ? nil : ads.unscope(:order).where("targets is not null").group("jsonb_array_elements(targets)->>'target'").order("count_all desc").limit(20).count.map{|k, v| {target: k, count: v} },
-            entities: params[:admin] ? nil : ads.unscope(:order).where("entities is not null").group("jsonb_array_elements(entities)->>'entity'").order("count_all desc").limit(20).count.map{|k, v| {entity: k, count: v} },
-            advertisers: params[:admin] ? nil : ads.unscope(:order).where("advertiser is not null").group("advertiser").order("count_all desc").limit(20).count.map{|k, v| {advertiser: k, count: v} },
-            total: params[:admin] ? nil : ads.count,
+            ads: ads_page.as_json(:except => [:suppressed], include: params.keys.any?{|key| CANDIDATE_PARAMS.include?(key)} ? :candidate : nil ), # +1 here to mimic Rust behavior.
+            targets: is_admin ? ads_page.map{|ad| (ad.targets || []).map{|t| t["target"]}}.flatten.inject(Hash.new(0)) { |h, e| h[e] += 1 ; h }.map{|k, v| {target: k, count: v} } : ads.unscope(:order).where("targets is not null").group("jsonb_array_elements(targets)->>'target'").order("count_all desc").limit(20).count.map{|k, v| {target: k, count: v} },
+            entities: is_admin ? [] : ads.unscope(:order).where("entities is not null").group("jsonb_array_elements(entities)->>'entity'").order("count_all desc").limit(20).count.map{|k, v| {entity: k, count: v} },
+            advertisers: is_admin ? (ads_page.map{|a| {"advertiser" => a.advertiser, "count" => 0}}.uniq) : ads.unscope(:order).where("advertiser is not null").group("advertiser").order("count_all desc").limit(20).count.map{|k, v| {advertiser: k, count: v} },
+            total: ads.count,
         } 
 
     end
