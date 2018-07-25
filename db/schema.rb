@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180515191728) do
+ActiveRecord::Schema.define(version: 20180711195118) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,9 @@ ActiveRecord::Schema.define(version: 20180515191728) do
     t.jsonb    "entities",              default: []
     t.text     "page"
     t.string   "lower_page"
+    t.text     "targetings",                                           array: true
+    t.text     "paid_for_by"
+    t.integer  "targetedness"
   end
 
   add_index "ads", ["advertiser"], name: "index_ads_on_advertiser", using: :btree

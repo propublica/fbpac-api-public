@@ -19,7 +19,10 @@ Rails.application.routes.draw do
       end
 
       collection do 
+        get "persona"
+        get "top_advertising_methods"
         get "summarize"
+        get "homepage_stats"
         get "by_segments"
         get "by_advertisers"
         get "by_targets"
