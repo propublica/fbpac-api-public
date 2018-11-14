@@ -16,6 +16,7 @@ Rails.application.routes.draw do
     resources :ads, only: [:show, :index] do 
       member do 
         put "suppress"
+        get "embed"
       end
 
       collection do 
@@ -23,6 +24,7 @@ Rails.application.routes.draw do
         get "top_advertising_methods"
         get "summarize"
         get "homepage_stats"
+        get "write_homepage_stats"
         get "by_segments"
         get "by_advertisers"
         get "by_targets"
@@ -32,6 +34,8 @@ Rails.application.routes.draw do
         get "this_week_segments"
         get "this_week_advertisers"
         get "this_week_targets"
+        get "advertiser"
+        get "by_state"
       end
     end
   end

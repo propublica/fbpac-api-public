@@ -1,0 +1,31 @@
+  <style>
+
+    #app {
+      width: 1024px;
+      margin: 0 auto;
+    }
+  </style>
+
+
+<div id="app">
+<h1>Combined targeting methods used by <%= @advertiser %></h1>
+
+<table>
+
+	<% @combined_methods.each do |methods, count| %>
+		<% next unless methods %>
+		<tr>
+		<td>
+		<%= link_to methods.reject{|a| a["target"] == "MinAge" || a["target"] == "MaxAge" }.map{|a| a['segment'] ? "#{a["target"]}: #{a["segment"]}" : a["target"] }.join(", "), "/facebook-ads/admin/ads?advertisers=%5B\"#{@advertiser}\"%5D&targets=%5B" + methods.map{|obj| obj["segment"] ? "%7B%22target%22%3A%22#{obj['target']}%22%2C%22segment%22%3A%22#{obj['segment']}%22%7D" : "%7B%22target%22%3A%22#{obj['target']}%22%7D" }.join(',') + "%5D" %>
+		</td>
+		<td><%= count %></td></tr>
+	<% end %>
+</table>
+
+<h1>Individual targeting segments used by <%= @advertiser %></h1>
+<table>
+	<% @individual_methods.each do |obj| %>
+		<tr><td><%= link_to "#{obj['target']}: #{obj['segment']}", "/facebook-ads/admin/ads?advertisers=%5B\"#{@advertiser}\"%5D&targets=%5B%7B%22target%22%3A%22#{obj['target']}%22#{obj['segment'] ? ("%2C%22segment%22%3A%22" + obj['segment'] + '%22') : ''}%7D%5D" %></td><td><%= obj["count"] %></td></tr>
+	<% end %>
+</table>
+</div>
