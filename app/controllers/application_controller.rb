@@ -17,6 +17,9 @@ class ApplicationController < ActionController::Base
     expires_in(48.hours, public: true, must_revalidate: true)
   end
 
+  def redirect_to_8080 
+    redirect_to "localhost:8080/facebook-ads/admin"
+  end
 
   def heartbeat
     head :ok, content_type: "text/html"

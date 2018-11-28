@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  scope "/facebook-ads" do 
+    get "/admin" => "application#redirect_to_8080" if ENV["DOCKERCOMPOSE"]
+  end
+
   scope "/fbpac-api" do 
     devise_for :partners
 

@@ -30,7 +30,6 @@ gem "coffee-rails"
 gem "http_accept_language"
 gem "kaminari"
 gem 'unicorn', '~> 5.2.0'
-gem "fog-aws", "~> 0.11.0"
 gem 'asset_sync', '~> 1.2.1'
 
 

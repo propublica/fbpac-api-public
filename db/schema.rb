@@ -44,6 +44,8 @@ ActiveRecord::Schema.define(version: 20180711195118) do
     t.text     "targetings",                                           array: true
     t.text     "paid_for_by"
     t.integer  "targetedness"
+    t.text     "phash",                                                         array: true
+    t.float    "listbuilding_fundraising_proba"
   end
 
   add_index "ads", ["advertiser"], name: "index_ads_on_advertiser", using: :btree

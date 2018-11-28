@@ -77,9 +77,12 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.action_controller.default_url_options = {
-    protocol: "https"
-  }
+  unless ENV["DOCKERCOMPOSE"] == "true"
+
+    config.action_controller.default_url_options = {
+      protocol: "https"
+    }
+  end
 
   config.logger = ActiveSupport::TaggedLogging.new(Logger.new(STDOUT))
   config.log_level = :info
@@ -89,5 +92,13 @@ Rails.application.configure do
   end
   config.action_mailer.default_url_options = { :host => 'projects.propublica.org' }
 
+  if ENV["DOCKERCOMPOSE"] == "true"
+    config.middleware.insert_before 0, "Rack::Cors" do
+      allow do
+        origins 'localhost:8080'
+        resource '*', :headers => :any, :methods => :any, credentials: true
 
+      end
+    end
+  end 
 end
