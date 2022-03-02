@@ -1,5 +1,12 @@
 # FBPAC API
 
+This repository is no longer maintained and exists for archival purposes only.
+
+For a more recent project on this topic, see
+[Ad Observer](https://adobserver.org).
+
+<details><summary>See archival README information.</summary>
+
 A Ruby API for the Facebook Political Ad Collector site.
 
 First, this will mirror _most_ of the admin-facing functions of the Rust API, then adding new stuff more nimbly to respond to what we want to present to partners and readers.
@@ -27,4 +34,4 @@ It's structured to be a drop-in replacement for some pieces of the Rust API... a
 
 Unlike the Rust API, we have real user accounts with a unique password per account. When a partner signs up, log into the production console with `RAILS_ENV=production rails c` and create them a user account with `User.create!({:email => "you@propublica.org", :password => "111111", :password_confirmation => "111111" })`. Then they should be good to go.
 
-
+</details>
