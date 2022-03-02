@@ -34,4 +34,4 @@ It's structured to be a drop-in replacement for some pieces of the Rust API... a
 
 Unlike the Rust API, we have real user accounts with a unique password per account. When a partner signs up, log into the production console with `RAILS_ENV=production rails c` and create them a user account with `User.create!({:email => "you@propublica.org", :password => "111111", :password_confirmation => "111111" })`. Then they should be good to go.
 
-</detail>
+</details>
